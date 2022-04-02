@@ -1,0 +1,159 @@
+.card{
+    perspective: 150rem;
+    position: relative;
+
+    &__front{
+        color: $color-white;
+        height: 414px;
+        box-shadow: 5px 5px 38px rgba($color: $color-black, $alpha: .2);
+        transition: transform .8s;
+    }
+
+    &__back{
+        height: 414px;
+        transform: rotateY($rotateY);
+        box-shadow: 5px 5px 38px rgba($color: $color-black, $alpha: .2);
+        transition: all .8s;
+        width: 100%;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    &:hover &__front{
+        transform: rotateY(-$rotateY);
+    }
+
+    &:hover &__back{
+        transform: rotateY(0);
+        box-shadow: 6px 7px 38px rgba($color: $color-black, $alpha: 0);
+    }
+
+    &__picture{
+        background-size: cover;
+        &--1{
+            height: 11rem;
+            background-blend-mode: screen;
+            clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url('image/nature\ 1.jpg');
+        }
+
+        &--2{
+            height: 11rem;
+            background-blend-mode: screen;
+            clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url('image/nature\ 6.jpg');
+        }
+
+        &--3{
+            height: 11rem;
+            background-blend-mode: screen;
+            clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url('image/nature\ 8.jpg');
+        }
+    }
+
+    &__heading{
+        font-size: 1.43rem;
+        font-weight: lighter;
+        text-transform: $text-transform;
+        position: absolute;
+        top: 6.0rem;
+        right: .9rem;
+        text-align: right;
+        line-height: 30px;
+        margin-left: 100px;
+        @include tablet-2{
+            font-size: 1.33rem;
+        }
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        &--1{
+            padding: 2px 12px;
+            display: inline-block;
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .78));
+        } 
+        &--2{
+            padding: 2px 12px;
+            display: inline-block;
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .8), rgba($color-secondary-dark, .78));
+        }
+        &--3{
+            padding: 2px 12px;
+            display: inline-block;
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .78));
+        } 
+        &--4{
+            padding: 2px 12px;
+            display: inline-block;
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .78));
+        }
+        &--5{
+            padding: 2px 12px;
+            display: inline-block;
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .78));
+        } 
+        &--6{
+            padding: 2px 12px;
+            display: inline-block;
+            letter-spacing: 1px;
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .8), rgba($color-tertiary-dark, .78));
+        }
+    }
+
+    &__detail{
+        padding-left: $margin-left-5;
+        padding-bottom: $margin-bottom-2;
+
+        ul{
+            list-style: none;
+            width: 80%;
+
+
+            li{
+                text-align: center;
+                color: $color-black;
+                font-size: .9rem;
+                padding: 10px;
+                @include tablet-2{
+                    font-size: .7rem;
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-2;
+                }
+            }
+        }
+    }
+
+    &__price{
+        color: $color-white;
+        text-align: center;
+        margin-bottom: 50px;
+
+        &--only{
+            font-size: 1.4rem;
+            text-transform: $text-transform;
+        }
+
+        &--value{
+            font-size: 65px;
+            font-weight: lighter;
+            font-family: mononserat;
+        }
+
+    }
+    .change{
+        text-align: center;
+    }
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+}
+
+// box-shadow: 5px 5px 38px rgba($color: $color-black, $alpha: .4);
+//   box-shadow: 4px 5px 38px rgba($color: $color-black, $alpha: .27);

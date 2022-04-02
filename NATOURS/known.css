@@ -1,0 +1,118 @@
+body {
+  padding: 40px 120px 40px 109px;
+}
+
+.first-column {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 50px;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  -ms-grid-columns: 50% 47%;
+      grid-template-columns: 50% 47%;
+  color: white;
+  font-size: 13px;
+}
+
+.first-column .number-one, .first-column .number-two, .first-column .second-column .number-three, .second-column .first-column .number-three, .first-column .forth-column .number-three, .forth-column .first-column .number-three, .first-column .forth-column .number-four, .forth-column .first-column .number-four, .first-column .fifth-column .number-three, .fifth-column .first-column .number-three {
+  background-color: #e42c4b;
+  padding: 18px 20px;
+}
+
+.first-column .number-two {
+  background-color: #e42c4b;
+}
+
+.second-column {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  -webkit-column-gap: 61px;
+          column-gap: 61px;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  color: white;
+  margin-top: 80px;
+  font-size: 13px;
+}
+
+.second-column .number-one, .second-column .number-two, .second-column .number-three, .second-column .forth-column .number-four, .forth-column .second-column .number-four {
+  background-color: #e42c4b;
+  padding: 18px 20px;
+}
+
+.third-column {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 61px;
+          column-gap: 61px;
+  -ms-grid-columns: 30% 66.2%;
+      grid-template-columns: 30% 66.2%;
+  color: white;
+  font-size: 13px;
+  margin-top: 80px;
+}
+
+.third-column .number-one, .third-column .second-column .number-three, .second-column .third-column .number-three, .third-column .number-two, .third-column .forth-column .number-three, .forth-column .third-column .number-three, .third-column .forth-column .number-four, .forth-column .third-column .number-four, .third-column .fifth-column .number-three, .fifth-column .third-column .number-three {
+  background-color: #e42c4b;
+  padding: 18px 20px;
+}
+
+.third-column .number-two {
+  background-color: #e42c4b;
+}
+
+.forth-column {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  -webkit-column-gap: 36.3px;
+          column-gap: 36.3px;
+  -ms-grid-columns: 23% 23% 23% 23%;
+      grid-template-columns: 23% 23% 23% 23%;
+  color: white;
+  margin-top: 80px;
+  font-size: 13px;
+}
+
+.forth-column .number-one, .forth-column .number-two, .forth-column .number-three, .forth-column .number-four {
+  background-color: #e42c4b;
+  padding: 18px 20px;
+}
+
+.fifth-column {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  -webkit-column-gap: 36.3px;
+          column-gap: 36.3px;
+  -ms-grid-columns: 23% 23% 49.7%;
+      grid-template-columns: 23% 23% 49.7%;
+  color: white;
+  margin-top: 80px;
+  font-size: 13px;
+}
+
+.fifth-column .number-one, .fifth-column .forth-column .number-four, .forth-column .fifth-column .number-four, .fifth-column .number-two, .fifth-column .number-three {
+  background-color: #e42c4b;
+  padding: 18px 20px;
+}
+
+.sixth-column {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  -webkit-column-gap: 36.3px;
+          column-gap: 36.3px;
+  -ms-grid-columns: 23% 76.3%;
+      grid-template-columns: 23% 76.3%;
+  color: white;
+  margin-top: 80px;
+  font-size: 13px;
+}
+
+.sixth-column .number-one, .sixth-column .second-column .number-three, .second-column .sixth-column .number-three, .sixth-column .forth-column .number-three, .forth-column .sixth-column .number-three, .sixth-column .forth-column .number-four, .forth-column .sixth-column .number-four, .sixth-column .fifth-column .number-three, .fifth-column .sixth-column .number-three, .sixth-column .number-two {
+  background-color: #e42c4b;
+  padding: 18px 20px;
+}
+/*# sourceMappingURL=known.css.map */

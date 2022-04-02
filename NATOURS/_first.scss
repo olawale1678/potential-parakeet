@@ -1,0 +1,114 @@
+$background-color:rgb(228, 44, 75);
+$color:white;
+$font-size:13px;
+body{
+    padding: 40px 120px 40px 109px;
+}
+.first-column{
+    display: grid;
+    row-gap: 50px;
+    column-gap: 50px;
+    grid-template-columns: 50% 47%;
+    color: $color;
+    font-size: $font-size;
+    .number-one{
+        background-color: $background-color;
+        padding: 18px 20px;
+    }
+    .number-two{
+        background-color: $background-color;
+        @extend .number-one;
+    }
+}
+.second-column{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 61px;
+    grid-template-columns: 30% 30% 30%;
+    color: $color;
+    margin-top: 80px;
+    font-size: $font-size;
+    .number-one{
+        background-color: $background-color;
+        padding: 18px 20px;
+    }
+    .number-two{
+        @extend .number-one;
+    }
+    .number-three{
+        @extend .number-one;
+    }
+}
+.third-column{
+    display: grid;
+    column-gap: 61px;
+    grid-template-columns: 30% 66.2%;
+    color: $color;
+    font-size: $font-size;
+    margin-top: 80px;
+    .number-one{
+        background-color: $background-color;
+        padding: 18px 20px;
+    }
+    .number-two{
+        background-color: $background-color;
+        @extend .number-one;
+    }
+}
+.forth-column{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 36.3px;
+    grid-template-columns: 23% 23% 23% 23%;
+    color: $color;
+    margin-top: 80px;
+    font-size: $font-size;
+    .number-one{
+        background-color: $background-color;
+        padding: 18px 20px;
+    }
+    .number-two{
+        @extend .number-one;
+    }
+    .number-three{
+        @extend .number-one;
+    }
+    .number-four{
+        @extend .number-one;
+    }
+}
+.fifth-column{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 36.3px;
+    grid-template-columns: 23% 23% 49.7%;
+    color: $color;
+    margin-top: 80px;
+    font-size: $font-size;
+    .number-one{
+        background-color: $background-color;
+        padding: 18px 20px;
+    }
+    .number-two{
+        @extend .number-one;
+    }
+    .number-three{
+        @extend .number-one;
+    }
+}
+.sixth-column{
+    display: grid;
+    row-gap: 10px;
+    column-gap: 36.3px;
+    grid-template-columns: 23% 76.3%;
+    color: $color;
+    margin-top: 80px;
+    font-size: $font-size;
+    .number-one{
+        background-color: $background-color;
+        padding: 18px 20px;
+    }
+    .number-two{
+        @extend .number-one;
+    }
+}

@@ -1,0 +1,148 @@
+body{
+    @include phone-small{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+    @include phone{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+    
+    @include tablet{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+    @include tablet-2{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+    @include laptop{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+}
+.header{
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, .8),
+     rgba(40 ,180, 131, .8)), url('../NATOURS/image/nature\ 3.jpg');
+    background-size: cover;
+    background-position: top;
+    height: 95vh;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+    @include phone-small{
+        height: 40vh;
+    }
+    .star{
+        position: absolute;
+        left: 32px;
+        top: 32px;
+        @include phone-small{
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        @include phone{
+            position: absolute;
+            left: 17px;
+            top: 17px;
+        }
+        
+        @include tablet{
+            position: absolute;
+            left: 19px;
+            top: 19px;
+        }
+        .logo{
+            height: 45px;
+            transition: all 1s;
+            @include phone-small{
+                height: 30px;
+            }
+            @include phone{
+                height: 45px;
+            }
+            
+            @include tablet{
+                height: 45px;
+            }
+        }
+    }
+    .text-box{
+        position: absolute;
+        top: 45%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .heading-primary{
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            @include phone-small{
+                margin-bottom: 39px;
+            }
+            @include phone{
+                margin-bottom: 39px;
+            }
+            
+            @include tablet{
+                margin-bottom: 49px;
+            }
+            .heading-primary-main{
+                display: block;
+                font-size: 55px;
+                font-weight: 200;
+                letter-spacing: 35px;
+                animation: left 1.4s;
+                @include phone-small{
+                    font-size: 13px;
+                    font-weight: 200;
+                    letter-spacing: 25px;
+                    margin-left: 15px;
+                }
+                @include phone{
+                    font-size: 35px;
+                    font-weight: 200;
+                    letter-spacing: 25px;
+                }
+                @include tablet{
+                    font-size: 47px;
+                    margin-bottom: $margin-bottom-05;
+                    font-weight: 200;
+                    letter-spacing: 30px;
+                }
+            }
+            .heading-primary-sub{
+                animation: right 1.4s;
+                font-size: 20px;
+                font-weight: 400;
+                letter-spacing: 15.52px;
+                display: block;
+                @include phone-small{
+                    font-size: 10px;
+                    font-weight: 200;
+                    margin-top: 13px;
+                    letter-spacing: 8.52px;
+                }
+                @include phone{
+                    font-size: 18px;
+                    font-weight: 200;
+                    letter-spacing: 8.52px;
+                }
+                @include tablet{
+                    font-size: 20px;
+                    font-weight: 200;
+                    letter-spacing: 8.92px;
+                }
+            }
+        }
+    }
+}
+::selection{
+    background-color: $color-primary;
+    color: $color-white;
+}

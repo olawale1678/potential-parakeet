@@ -1,0 +1,162 @@
+@import "responsive-setup";
+
+.story{
+    box-shadow: 0px 10px 20px rgba($color: #000000, $alpha: .3);
+    width: 60%;
+    margin: 0px auto;
+    padding: 19px 54px;
+    background-color: rgba(white, .5);
+    transform: skewX(-12deg);
+    position: relative;
+    @include phone{
+        width: 85%;
+        padding: 10px 24px 10px 27px;
+        margin-top: 0px;
+    }
+    @include tablet{
+        width: 85%;
+        padding: 10px 44px;
+        margin-top: 0px;
+    }
+    @include tablet-2{
+        width: 85%;
+        padding: 10px 44px;
+        margin-top: 0px;
+    }
+    @include laptop{
+        width: 85%;
+        padding: 10px 44px;
+        margin-top: 0px;
+    }
+
+    &__shape{
+        width: 120px;
+        height: 120px;
+        shape-outside: circle(50% at 50% 58%);
+        clip-path: circle(50% at 50% 50%);
+        float: left;
+        transform: translateX(-12px) translateY(10px) skewX(12deg);
+        margin-right: 20px;
+        position: relative;
+    }
+
+    &:hover &__caption{
+        &:not(:last-child){
+        transform: translateY(87%) translateX(9px);
+            @include phone{
+                transform: translateY(-20%) translateX(120px);
+            }
+            @include tablet{
+                transform: translateY(-2%) translateX(120px);
+            }
+            @include tablet-2{
+                transform: translateY(-2%) translateX(120px);
+            }
+            @include laptop{
+                transform: translateY(-2%) translateX(120px);
+            }
+        }
+        &:not(:first-child){
+            transform: translateY(85%) translateX(-9px);
+            opacity: 1;
+            @include phone{
+                transform: translateY(-60%) translateX(-22px);
+                opacity: 1;
+            }
+            @include tablet{
+                transform: translateY(-13%) translateX(-22px);
+                opacity: 1;
+            }
+            @include tablet-2{
+                transform: translateY(-13%) translateX(-2px);
+                opacity: 1;
+            }
+            @include laptop{
+                transform: translateY(-13%) translateX(-2px);
+                opacity: 1;
+            }
+        }
+    }
+
+    &:hover &__image{
+        transform: scale(.99);
+        filter: blur(3px) brightness(95%);
+        backface-visibility: visible;
+    }
+
+    &__image{
+        height: 100%;
+        transform: scale(1.19) translateY(5px);
+        transition: all  .6s;
+
+    }
+
+    &__caption{
+        position: absolute;
+        top: 33%;
+        left: 8.7%;
+        opacity: 0;
+        transform: translateY(65px) skewX(12deg);
+        color: $color-white;
+        font-size: 17px;
+        text-transform: $text-transform;
+        transition: all .6s;
+        @include phone{
+            top: 30%;
+            left: 15.7%;
+        }
+        @include tablet{
+            top: 30%;
+            left: 12%;
+        }
+        @include tablet-2{
+            top: 50%;
+            left: 7%;
+        }
+        @include laptop{
+            top: 50%;
+            left: 7%;
+        }
+    }
+
+    &__text{
+        transform: skewX(12deg);
+
+        .heading-tertiary{
+            margin-bottom: $margin-bottom-1;
+            text-transform: $text-transform;
+            @include tablet-2{
+                font-size: 16px;
+            }
+        }
+
+        .paragraph{
+            font-size: 13px;
+        }
+    }
+
+    &:not(nth:first-child) {
+        margin-top: $margin-top-9;
+        transform: translateX();
+        @include phone{
+            margin-top: $margin-top-4;
+        }
+        @include tablet{
+            margin-top: $margin-top-4;
+        }
+        @include tablet-2{
+            margin-top: $margin-top-4;
+        }
+        @include laptop{
+            margin-top: $margin-top-4;
+        }
+    }
+
+    &__link{
+        position: absolute;
+        top: 111%;
+        left: 50%;
+        transform: translateX(-50%);
+        backface-visibility: hidden;
+    }
+}

@@ -1,0 +1,101 @@
+.composition{
+    position: relative;
+    @include phone{
+        position: absolute;
+        top: 61rem;
+        left: 3.2rem;
+        width: 80%;
+    }
+    @include tablet{
+        position: absolute;
+        top: 67rem;
+        left: 5.2rem;
+        width: 75%;
+    }
+    @include tablet-2{
+        position: absolute;
+        top: 44rem;
+        right: -.6rem;
+        width: 50%;
+    }
+    &__photo{
+        width: 50%;
+        box-shadow: 0px .5rem 2.1rem rgba($color: #000000, $alpha: .6);
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        transition: all .15s;
+        outline-offset: 15px;
+
+        &--p1{
+            top: -3px;
+            left: 0px;
+            height: 183.919px;
+            @include phone-small{
+                top: -3px;
+                left: -6px;
+                height: 88.919px;
+            }
+            @include phone{
+                top: -3px;
+                left: 29px;
+            }
+            @include tablet{
+                top: -3px;
+                left: 29px;
+            }
+        }
+        &--p2{
+            right: 40px;
+            top: 30px;
+            height: 183.919px;
+            @include phone-small{
+                right: 24px;
+                top: 6px;
+                height: 90.919px;
+            }
+            @include phone{
+                right: 25px;
+                top: 23px;
+            }
+            @include tablet{
+                right: 25px;
+                top: 23px;
+            }
+        }
+        &--p3{
+            top: 5.4rem;
+            left: 20%;
+            height: 183.919px;
+            @include phone-small{
+                height: 90.919px;
+                top: 1.4rem;
+                left: 16%;
+            }
+            @include phone{
+                top: 3.4rem;
+                left: 20%;
+            }
+            @include tablet{
+                top: 3.4rem;
+                left: 20%;
+            }
+        }
+        &:hover{
+            outline: $color-primary solid 10px;
+            transform: scale(1.07) translateY(-.5rem);
+            box-shadow: 0px 1.2rem 1.7rem rgba($color: #000000, $alpha: 1);
+            border-radius: 0px;
+            z-index: 20;
+            @include phone{
+                transform: scale(1.12) translateY(-.6rem);
+            }
+            @include tablet{
+                transform: scale(1.12) translateY(-.6rem);
+            }
+        }
+    }
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+    }
+}

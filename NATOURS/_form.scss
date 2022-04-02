@@ -1,0 +1,144 @@
+.form{
+    position: relative;
+
+    &__group{
+        transform: translateY(-45px);
+        transition: all .3s;
+
+        &:last-child{
+            padding-top: 10px;
+        }
+        &--input{
+            height: 45px;
+            border: none;
+            box-shadow: 0px 10px 20px rgba($color-black, .25);
+            background-color: rgba($color: $color_white, $alpha: .7);
+            border-bottom: 3px solid transparent;
+            width: 95%;
+            color: inherit;
+            padding: 12px 10px;
+            font-size: 17px;
+            @include phone{
+                font-size: 14px;
+            }
+            @include tablet{
+                font-size: 14px;
+            }
+            @include tablet-2{
+                font-size: 14px;
+            }
+            &:focus{
+                border-bottom: 3px solid $color-primary;
+                border-radius: 2px;
+                outline: none;
+            }
+            &:focus:invalid{
+                border-bottom: 3px solid $color-secondary-dark;
+                
+            }
+        }
+    
+        &--label{
+            margin-left: 10px;
+            font-size: 16px;
+            transition: all .4s;
+            display: block;
+            transition: all .425s;
+            @include phone{
+                font-size: 14px;
+            }
+            @include tablet{
+                font-size: 14px;
+            }
+            @include tablet-2{
+                font-size: 14px;
+            }
+        }
+
+        &--input:placeholder-shown + &--label {
+            transform: translateY(-10px);
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    
+    &__radio-group{
+        display: inline-block;
+        width: 46%;
+        margin-top: 10px;
+
+    }
+
+    &__radio-input{
+        opacity: 0;
+    }
+
+    &__radio-label{
+        font-size: 1rem;
+        position: relative;
+        cursor: pointer;
+        padding-left: 14px;
+        @include phone{
+            font-size: .82rem;
+        }
+        @include tablet{
+            font-size: .82rem;
+        }
+        @include tablet-2{
+            font-size: .82rem;
+        }
+    }
+
+    &__radio-button{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 5px solid $color-primary;
+        display: inline-block;
+        position: absolute;
+        top: -3px;
+        left: -17px;
+        &::after{
+            content: "";
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+
+    &-button{
+        position: absolute;
+        top: 220px;
+        left: -33px;
+        @include phone{
+            top: 210px;
+            left: -8px;
+        }
+        @include tablet{
+            top: 210px;
+            left: -8px;
+        }
+        @include tablet-2{
+            top: 210px;
+            left: -8px;
+        }
+        button{
+            border: none;
+            font-size: inherit;
+            border-radius: 100px;
+            display: block;
+            cursor: pointer;
+        }
+    }
+}

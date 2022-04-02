@@ -1,0 +1,291 @@
+@import "responsive-setup";
+
+
+.section-about{
+    background-color: $color-grey-1;
+    padding: 25rem 0px;
+    margin-top: -34vh;
+    @include phone-small{
+        padding: 12rem 0px 37rem 0px;
+        margin-top: -31vh;
+        overflow: hidden;
+    }
+    @include phone{
+        padding: 12rem 0px 37rem 0px;
+        margin-top: -28vh;
+    }
+    @include tablet{
+        padding: 12rem 0px 37rem 0px;
+        margin-top: -25vh;
+    }
+    @include tablet-2{
+        padding: 12rem 0px 37rem 0px;
+        margin-top: -27vh;
+    }
+    @include laptop{
+        padding: 12rem 0px 37rem 0px;
+        margin-top: -17vh;
+    }
+    h2.heading-secondary{
+        font-size: 1.73rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        display: $inline-block;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: 1px;
+        transition: all .155s;
+        @include phone-small{
+            font-size: .9rem;
+            background-color: red;
+            font-weight: 700;
+            text-align: center;
+        }
+        @include phone{
+            font-size: 1.09rem;
+            background-color: red;
+            font-weight: 700;
+        }
+        @include tablet{
+            font-size: 1.36rem;
+            background-color: red;
+            font-weight: 700;
+        }
+        @include tablet-2{
+            font-size: 1.36rem;
+            background-color: red;
+            font-weight: 700;
+        }
+        @include laptop{
+            font-size: 1.39rem;
+            background-color: red;
+            font-weight: 700;
+        }
+        &:hover{
+            transform: skew(10deg ,2deg) scale(1.07);
+            text-shadow: .5rem .7rem .8rem rgba($color-black, .3);
+            @include phone{}
+        }
+    }
+}
+
+.section-feature{
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light,.7), rgba($color-primary-dark, .8)),url('image/nature\ 7.jpg');
+    padding: 200px 120px;
+    margin-bottom: $margin-bottom-7;
+    background-size: cover;
+    background-position: top;
+    height: 94vh;
+    margin-top: -10rem;
+    transform: skewy(-6deg);
+    @include phone-small{
+        padding: 40px 47px;
+        height: 195vh;
+        margin-top: -16rem;
+    }
+    @include phone{
+        padding: 200px 120px;
+        height: 54vh;
+    }
+    @include tablet{
+        padding: 200px 120px;
+        height: 54vh;
+    }
+    @include tablet-2{
+        padding: 200px 120px;
+        height: 80vh;
+        margin-top: -29rem;
+    }
+    @include laptop{
+        padding: 200px 120px;
+        height: 80vh;
+        margin-top: -25rem;
+    }
+    & > *{
+        transform: skewY(6deg);
+    }
+}
+
+.section-tours{
+    background-color: $color-grey-1;
+    padding: 10rem 0px 2rem 0px;
+    margin-top: -130px;
+    @include phone-small{
+        margin-top: -166px;
+        padding: 10rem 0px 2rem 0px;
+    }
+    @include phone{
+        margin-top: -166px;
+        padding: 10rem 0px 2rem 0px;
+    }
+    @include tablet{
+        margin-top: -140px;
+        padding: 10rem 0px 2rem 0px;
+    }
+    @include tablet-2{
+        margin-top: -140px;
+        padding: 10rem 0px 2rem 0px;
+    }
+    @include laptop{
+        margin-top: -87px;
+        padding: 10rem 0px 2rem 0px;
+    }
+
+    h2.heading-tertiary{
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 1.73rem;
+        letter-spacing: 1px;
+        text-transform: $text-transform;
+        font-weight: 700;
+        display: $inline-block;
+        transition: all .155s;
+        @include phone-small{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        @include phone{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        @include tablet{
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        @include tablet-2{
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        @include laptop{
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        &:hover{
+            text-shadow: .5rem .7rem .8rem rgba($color: $color-black, $alpha: .4);
+            transform: skew(10deg, 2deg) scale(1.09);
+            @include phone{}
+        }
+    }
+}
+
+.section-story{
+    padding: 6rem 0px 8rem 0px;
+    margin-top: -20px;
+    position: relative;
+    @include phone-small{
+        padding: 6rem 0px 8rem 0px;
+        margin-top: -47px;
+        display: none;
+    }
+    @include phone{
+        padding: 6rem 0px 8rem 0px;
+        margin-top: -47px;
+    }
+    @include tablet{
+        padding: 6rem 0px 8rem 0px;
+        margin-top: -44px;
+    }
+    @include tablet-2{
+        padding: 6rem 0px 8rem 0px;
+        margin-top: -48px;
+    }
+    @include laptop{
+        padding: 6rem 0px 8rem 0px;
+        margin-top: -48px;
+    }
+
+    .row{
+        position: relative;
+    }
+    
+    .opacity-change{
+        background-image: url('image/nature\ 12.jpg') ;
+        height: 167vh;
+        background-size: cover;
+        background-position: top;
+        opacity: .3;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -1;
+        @include phone-small{
+            height: 177vh;
+        }
+        @include phone{
+            height: 177vh;
+        }
+        @include tablet{
+            height: 177vh;
+        }
+        @include tablet-2{
+            height: 177vh;
+        }
+        @include laptop{
+            height: 177vh;
+        }
+        @include laptop-2{
+            height: 197vh;
+        }
+
+    }
+
+    h2.heading-secondary{
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 1.73rem;
+        letter-spacing: 1px;
+        text-transform: $text-transform;
+        font-weight: 700;
+        display: $inline-block;
+        transition: all .155s;
+        @include phone-small{
+            font-size: 1.23rem;
+        }
+        @include phone{
+            font-size: 1.23rem;
+        }
+        @include tablet{
+            font-size: 1.47rem;
+        }
+        @include tablet-2{
+            font-size: 1.47rem;
+        }
+        @include laptop{
+            font-size: 1.47rem;
+        }
+        &:hover{
+            text-shadow: .5rem .7rem .8rem rgba($color: $color-black, $alpha: .4);
+            transform: skew(10deg, 2deg) scale(1.09);
+            @include phone{}
+        }
+    }
+}
+
+.section-book{
+    padding: 9rem 12rem;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    @include phone-small{
+        padding: 3rem 0rem;
+        display: none;
+    }
+    @include phone{
+        padding: 3rem 0rem;
+    }
+    @include tablet{
+        padding: 3rem 0rem;
+    }
+    @include tablet-2{
+        padding: 3rem 0rem;
+    }
+    @include laptop{
+        padding: 0rem 0rem;
+    }
+
+}

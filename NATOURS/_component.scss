@@ -1,0 +1,283 @@
+@import "responsive-setup";
+.first-row{
+    display: grid;
+    row-gap: 50px;
+    column-gap: 40px;
+    grid-template-columns: 50% 47%;
+    font-size: $font-size;
+    .number-one{
+        width: 465px;
+        margin-left: $margin-left-12;
+        @include phone-small{
+            margin-left: $margin-left-015;
+        }
+        @include phone{
+            margin-left: $margin-left-015;
+        }
+        @include tablet{
+            margin-left: $margin-left-8;
+        }
+        @include tablet-2{
+            margin-left: $margin-left-2;
+            width: 99%;
+        }
+        @include laptop{
+            margin-left: $margin-left-2;
+            width: 99%;
+        }
+    }
+    .number-two{
+        margin-right: $margin-right-12;
+        @include phone-small{
+            transform: translateY(130%) translateX(-60%);
+            width: 169%;
+            margin-right: 0px;
+        }
+        @include tablet-2{
+            margin-right: $margin-right-1;
+        }
+        @include laptop{
+            margin-right: $margin-right-2;
+        }
+    }
+}
+.forth-row{
+    display: grid;
+    position: relative;
+    row-gap: 10px;
+    column-gap: 36.3px;
+    grid-template-columns: 23% 23% 23% 23%;
+    color: $color-black;
+    margin-top: 80px;
+    font-size: $font-size;
+    @include phone-small{
+        margin-top: 0px;
+        display: block;
+    }
+    @include phone{
+        margin-top: 35px;
+    }
+    @include tablet{
+        margin-top: 35px;
+    }
+    @include tablet-2{
+        margin-top: 40px;
+    }
+    @include laptop{
+        margin-top: 40px;
+    }
+    .number-one{
+        margin-top: -156px;
+        transition: all .2s;
+        &:first-child{
+            @include phone-small{
+                margin-top: -219px;
+            }
+            @include phone{
+                position: absolute;
+                top: 0px;
+                left: -112px;
+            }
+            @include tablet{
+                position: absolute;
+                top: 0px;
+                left: -110px;
+            }
+            @include tablet-2{
+                position: absolute;
+                top: 0px;
+                left: -67px;
+            }
+            @include laptop{
+                position: absolute;
+                top: 0px;
+                left: -52px;
+            }
+        }
+
+        &:nth-child(2){
+            @include phone-small{
+            }
+            @include phone{
+                position: absolute;
+                top: 0px;
+                left: 48px;
+            }
+            @include tablet{
+                position: absolute;
+                top: 0px;
+                left: 54px;
+            }
+            @include tablet-2{
+                position: absolute;
+                top: 0px;
+                left: 122px;
+            }
+            @include laptop{
+                position: absolute;
+                top: 0px;
+                left: 160px;
+            }
+        }
+        
+        &:nth-child(3){
+            @include phone-small{
+            }
+            @include phone{
+                position: absolute;
+                top: 0px;
+                left: 208px;
+            }
+            @include tablet{
+                position: absolute;
+                top: 0px;
+                left: 216px;
+            }
+            @include tablet-2{
+                position: absolute;
+                top: 0px;
+                left: 309px;
+            }
+            @include laptop{
+                position: absolute;
+                top: 0px;
+                left: 373px;
+            }
+        }
+        
+        &:nth-child(4){
+            @include phone-small{
+            }
+            @include phone{
+                position: absolute;
+                top: 0px;
+                left: 345px;
+                display: none;
+            }
+            @include tablet{
+                position: absolute;
+                top: 0px;
+                left: 382px;
+            }
+            @include tablet-2{
+                position: absolute;
+                top: 0px;
+                right: -93px;
+            }
+            @include laptop{
+                position: absolute;
+                top: 0px;
+                right: -76px;
+            }
+        }
+
+        &:hover{
+            transform: translateY(-3.7px) scale(1.05);
+        }
+    }
+    &:hover .number-one:not(:hover){
+        transform: scale(.95);
+    }
+}
+
+.second-row{
+    display: grid;
+    column-gap: 61px;
+    grid-template-columns: 25% 25% 25%;
+    color: $color-black;
+    font-size: $font-size;
+    padding-left: $margin-left-17;
+    @include phone-small{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        padding-left: $margin-left-2;
+
+    }
+    @include phone{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        padding-left: $margin-left-12;
+
+    }
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        padding-left: 171px;
+
+    }
+    @include tablet-2{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        padding-left: 31px;
+
+    }
+    @include laptop{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        padding-left: 31px;
+
+    }
+
+    .number-one{
+        @include phone-small{
+            width: 89%;
+            display: inline-block;
+        }
+        @include phone{
+            width: 74%;
+            display: inline-block;
+        }
+        @include tablet{
+            width: 64%;
+            display: inline-block;
+        }
+        @include tablet-2{
+            width: 28%;
+            display: inline-block;
+        }
+        @include laptop{
+            width: 28%;
+            display: inline-block;
+        }
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.u-center-text{ text-align: $text-align;}
+.u-margin-bottom-8{ margin-bottom: 4.5rem;
+
+    @include phone-small{ margin-bottom: 1.5rem;}
+    @include phone{ margin-bottom: 1.9rem;}
+    @include tablet{ margin-bottom: 1.9rem;}
+    @include tablet-2{ margin-bottom: 3.9rem;}
+}
+.u-margin-top-8{ margin-top: 5.9rem;
+    @include phone{ margin-top: 2.9rem;}
+    @include tablet{ margin-top: 2.9rem;}
+    @include tablet-2{ margin-top: 2.9rem;}
+}
+.u-margin-bottom-9{ margin-bottom: 5.9rem;
+    @include phone{ margin-bottom: 1.9rem;
+    }
+    @include tablet{ margin-bottom: 1.9rem;
+    }
+    @include tablet-2{ margin-bottom: 1.9rem;
+    }
+}
+
+.card__back--one{
+    background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+}
+.card__back--two{
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+.card__back--three{
+    background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+}

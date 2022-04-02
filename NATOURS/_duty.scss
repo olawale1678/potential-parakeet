@@ -1,0 +1,311 @@
+@import "responsive-setup";
+
+body{
+    @include phone-small{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+    @include phone{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+    
+    @include tablet{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+    
+    @include tablet-2{
+        padding: 0px;
+        font-family: sans-serif;
+        color: #777;
+    }
+}
+
+.main-cover{
+    @include phone-small{
+        padding-right: 12.7rem;
+    }
+    .sub-cover{
+        margin-bottom: $margin-bottom-15;
+        @include phone-small{
+            margin-bottom: $margin-bottom-1;
+        }
+        @include phone{
+            margin-bottom: $margin-bottom-1;
+        }
+        @include tablet{
+            margin-bottom: $margin-bottom-1;
+        }
+        @include tablet-2{
+            margin-bottom: $margin-bottom-1;
+        }
+        .heading-tertiary{
+            font-weight: lighter;
+            font-size: .9rem;
+            letter-spacing: 1px;
+            text-transform: $text-transform;
+            margin-bottom: $margin-bottom-15;
+            @include phone-small{
+                font-size: .8rem;
+                margin-bottom: $margin-bottom-1;
+                margin-left: -4px;
+                text-align: center;
+            }
+            @include phone{
+                font-size: .9rem;
+                margin-bottom: $margin-bottom-1;
+            }
+            @include tablet{
+                font-size: 1.1rem;
+                margin-bottom: $margin-bottom-1;
+            }
+            @include tablet-2{
+                font-size: 1.1rem;
+                margin-bottom: $margin-bottom-1;
+            }
+            @include laptop{
+                font-size: 1.1rem;
+                margin-bottom: $margin-bottom-1;
+            }
+        }
+        .paragraph{
+            font-size: .8rem;
+            font-weight: lighter;
+            letter-spacing: $letter-spacing;
+            line-height: $line-height;
+            text-align: start;
+            @include phone-small{
+                font-size: .7rem;
+            }
+            @include phone{
+                font-size: .8rem;
+            }
+            @include tablet{
+                font-size: .8rem;
+            }
+            @include tablet-2{
+                font-size: .8rem;
+            }
+            @include laptop{
+                font-size: .8rem;
+            }
+        }
+    }
+    .secondary-sub-cover{
+        margin-bottom: $margin-bottom-15;
+        text-align: start;
+        @include phone-small{
+            margin-bottom: $margin-bottom-1;
+        }
+        @include phone{
+            margin-bottom: $margin-bottom-1;
+        }
+        @include tablet{
+            margin-bottom: $margin-bottom-1;
+        }
+        @include tablet-2{
+            margin-bottom: $margin-bottom-1;
+        }
+        @include laptop{
+            margin-bottom: $margin-bottom-1;
+        }
+        .heading-tertiary{
+            font-weight: lighter;
+            letter-spacing: 1px;
+            font-size: .9rem;
+            text-transform: $text-transform;
+            margin-bottom: $margin-bottom-15;
+            @include phone-small{
+                margin-bottom: $margin-bottom-1;
+                font-size: .8rem;
+                margin-left: -4px;
+                text-align: center;
+            }
+            @include phone{
+                margin-bottom: $margin-bottom-1;
+            }
+            @include tablet{
+                margin-bottom: $margin-bottom-1;
+                font-size: 1rem;
+            }
+            @include tablet-2{
+                margin-bottom: $margin-bottom-1;
+                font-size: 1.01rem;
+            }
+            @include laptop{
+                margin-bottom: $margin-bottom-1;
+                font-size: 1.01rem;
+            }
+        }
+        .paragraph{
+            font-size: .8rem;
+            font-weight: lighter;
+            letter-spacing: $letter-spacing;
+            line-height: $line-height;
+            text-align: start;
+            @include phone-small{
+                font-size: .7rem;
+            }
+        }
+    }
+}
+
+.feature-box{
+    overflow: hidden;
+    background-color: rgba($color-white, $alpha: .8);
+    padding: 2.09rem .9rem .88rem .9rem;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: .8rem .9rem 1.1rem rgba($color-black, $alpha: .35);
+    border-radius: 3px;
+    margin-top: .4rem;
+    @include phone-small{
+        padding: 2.09rem .5rem .88rem .5rem;
+        font-size: 1rem;
+        margin-top: .4rem;
+        width: 190px;
+        &:not(:last-child){
+            margin-right: 10000px;
+        }
+    }
+    @include phone{
+        padding: 2.09rem 0rem .88rem 0rem;
+        font-size: 1rem;
+        margin-top: .4rem;
+        width: 150px;
+        &:not(:last-child){
+            margin-right: 10000px;
+        }
+    }
+    @include tablet{
+        padding: 2.09rem 0rem .88rem 0rem;
+        font-size: 1rem;
+        margin-top: .4rem;
+        width: 150px;
+        &:not(:last-child){
+            margin-right: 10000px;
+        }
+    }
+    @include tablet-2{
+        padding: 2.09rem 0rem .88rem 0rem;
+        font-size: 1rem;
+        margin-top: .4rem;
+        width: 150px;
+        &:not(:last-child){
+            margin-right: 10000px;
+        }
+    }
+    @include laptop{
+        padding: 2.09rem 0rem .88rem 0rem;
+        font-size: 1rem;
+        margin-top: .4rem;
+        width: 150px;
+        &:not(:last-child){
+            margin-right: 10000px;
+        }
+    }
+    &__icon{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-bottom: 1.03rem;
+        @include phone-small{
+            margin-bottom: 1.03rem;
+        }
+        @include phone{
+            margin-bottom: 1.03rem;
+        }
+        @include tablet{
+            margin-bottom: 1.03rem;
+        }
+        @include tablet-2{
+            margin-bottom: 1.03rem;
+        }
+        @include laptop{
+            margin-bottom: 1.03rem;
+        }
+    }
+
+    .heading-tertiary{
+        font-size: .9999rem;
+        font-weight: lighter;
+        margin-bottom: $margin-bottom-1;
+        opacity: .9;
+        text-transform: $text-transform;
+        background-image: linear-gradient(to top right, rgba($blue-one,.7), rgba($red-one, .8));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        @include phone-small{
+            font-size: .8rem;
+        }
+        @include phone{
+            font-size: .8rem;
+        }
+        @include tablet{
+            margin-bottom: 1.13rem;
+            font-size: .8rem;
+        }
+        @include tablet-2{
+            margin-bottom: 1.13rem;
+            font-size: .83rem;
+        }
+        @include laptop{
+            margin-bottom: 1.13rem;
+            font-size: .83rem;
+        }
+    }
+
+    &__text{
+        font-size: 12px;
+        letter-spacing: .06rem;
+        @include phone-small{
+            font-size: 9px;
+            letter-spacing: .06rem;
+        }
+        @include phone{
+            font-size: 9px;
+            letter-spacing: .06rem;
+        }
+        @include tablet{
+            font-size: 9px;
+            letter-spacing: .06rem;
+        }
+        @include tablet-2{
+            font-size: 9px;
+            letter-spacing: .06rem;
+        }
+        @include laptop{
+            font-size: 9px;
+            letter-spacing: .06rem;
+        }
+    }
+    &:hover{
+        box-shadow: 1.16rem .9rem .8rem rgba($color-black, $alpha: .35);
+        @include phone{}
+    }
+}
+
+.move__link{
+    margin-left: $margin-left-4;
+    @include phone-small{
+        margin-left: $margin-left-1;
+    }
+    @include phone{
+        margin-left: $margin-left-1;
+    }
+    @include tablet{
+        margin-left: $margin-left-1;
+    }
+    @include tablet-2{
+        margin-left: $margin-left-1;
+    }
+    @include laptop{
+        margin-left: $margin-left-4;
+    }
+}
+

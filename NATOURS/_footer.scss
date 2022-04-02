@@ -1,0 +1,222 @@
+@import "responsive-setup";
+
+.footer{
+    background-color: $color-grey-dark-3;
+    padding: 5rem 0 4rem 0;
+    @include phone-small{
+        margin-top: -35px;
+        padding: 2rem 0 2rem 0;
+        overflow: hidden;
+    }
+    @include phone{
+        margin-top: -49px;
+        padding: 2rem 0 2rem 0;
+    }
+    @include tablet{
+        margin-top: -49px;
+        padding: 3.8rem 0 2rem 0;
+        overflow: hidden;
+    }
+    @include tablet-2{
+        margin-top: -49px;
+        padding: 3.8rem 0 2rem 0;
+        overflow: hidden;
+    }
+
+    &__logo-box{
+        text-align: center;
+        margin-bottom: 6rem;
+        @include phone-small{
+            margin-bottom: 3rem;
+        }
+        @include phone{
+            margin-bottom: 6rem;
+        }
+        @include tablet{
+            margin-bottom: 6rem;
+        }
+        @include tablet-2{
+            margin-bottom: 6rem;
+        }
+        .footer__logo{
+            height: 45px;
+            width: 45px;
+            @include phone-small{
+                height: 35px;
+                width: 35px;
+            }
+            @include phone{
+                height: 35px;
+                width: 35px;
+            }
+            @include tablet{
+                height: 35px;
+                width: 35px;
+            }
+            @include tablet-2{
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+
+    .row{
+        margin-left: 0px;
+        .first-row{
+            display: grid;
+            row-gap: 20px;
+            column-gap: 20px;
+            grid-template-columns: 50% 47%;
+            font-size: $font-size;
+            color:  $color-grey-2;
+            @include phone-small{
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 9px;
+                flex: 1;
+            }
+            @include phone{
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 12px;
+                flex: 3;
+            }
+            @include tablet{
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 12px;
+                flex: 3;
+            }
+            @include tablet-2{
+                font-size: 12px;
+                column-gap: 2px;
+            }
+            .number-one{
+                padding: 18px 5px;
+                font-size: 14px;
+                @include phone-small{
+                    width: 100%;
+                    display: block;
+                    padding: 0px 5px;
+                }
+                @include phone{
+                    width: 100%;
+                    display: block;
+                    padding: 0px 5px;
+                }
+                @include tablet{
+                    width: 100%;
+                    display: block;
+                    padding: 0px 5px;
+                }
+                @include tablet-2{
+                    width: 100%;
+                    display: block;
+                    padding: 0px 35px;
+                }
+
+                .footer__navigation{
+                    .footer__list{
+                        list-style: none;
+                        border-top: 1px solid $color-grey-1;
+                        display: inline-block;
+                        .footer__item{
+                            display: inline-block;
+                            text-transform: uppercase;
+                            margin-top: 14px;
+                            &:not(:last-child) {
+                                padding-right: 10px;
+                            }
+                            .footer__link{
+                                &:link,
+                                &:visited{                                   
+                                color: $color-white;
+                                text-decoration: none;
+                                transition: all .3s;
+                                @include phone-small{
+                                    font-size: 12px;
+                                    line-height: 0px;
+                                }
+                                }
+
+                                &:hover,
+                                &:active{
+                                    color: $color-primary;
+                                    box-shadow: 0px 10px 20px rgba($color: $color-black, $alpha: .4);
+                                    transform: scale(1.09) rotate(8deg);
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .number-two{
+                padding: 18px 5px;
+                font-size: 16px;
+                border-top: 1px solid $color-grey-1;
+                display: inline-block;
+                transform: translateY(15px);
+                @include phone-small{
+                    padding: 8px 41px 0px 1px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    transform: translateY(19px) translateX(24px);
+                }
+                @include phone{
+                    padding: 8px 21px 0px 21px;
+                    transform: translateY(19px) translateX(49px);
+                }
+                @include tablet{
+                    padding: 10px 21px 0px 21px;
+                    transform: translateY(19px) translateX(49px);
+                    overflow: hidden;
+                }
+                @include tablet-2{
+                    padding: 10px 25px 0px 10px;
+                    transform: translateY(0px) translateX(49px);
+                    overflow: hidden;
+                }
+
+                .copy-right{
+                    @include phone-small{
+                        overflow: hidden !important;
+                    }
+                    .footer__link{
+                        &:link,
+                        &:visited{                                   
+                        color: $color-white;
+                        text-decoration: none;
+                        }
+
+                        &:hover,
+                        &:active{
+                            background-image: linear-gradient(130deg, $red-one, $blue-one);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            box-shadow: 4px 10px 20px rgba($color: $color-black, $alpha: .4);
+                            display: inline-block;
+                            &:not(:last-child){
+                                padding-right: 4.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .last{
+        background-image: linear-gradient(130deg, $red-one, $blue-one 80%);
+        margin-top: 3rem;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 50px;
+        text-align: center;
+        @include phone-small{
+            font-size: 35px;
+        }
+    }
+}

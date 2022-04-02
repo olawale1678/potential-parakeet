@@ -1,0 +1,263 @@
+@import "responsive-setup";
+
+.popup{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: .88);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ;
+    @include phone-small{
+        display: none;
+    }
+
+    &:target{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:target &-content{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &-close{
+        &:link,
+        &:visited{
+            font-size: 32px;
+            z-index: 2000;
+            text-decoration: none;
+            color: $color-grey-dark;
+            position: absolute;
+            top: 4.3rem;
+            right: 11rem;
+            transition: all .2s;
+            @include phone{
+                top: 3.2rem;
+                right: 1.4rem;
+            }
+            @include tablet{
+                top: 3.6rem;
+                right: 1.99rem;
+            }
+            @include tablet-2{
+                top: 3.9rem;
+                right: 2.7rem;
+            }
+            @include laptop{
+                top: 4.2rem;
+                right: 4.7rem;
+            }
+        }
+
+        &:hover,
+        &:active{
+            color: $color-primary;
+        }
+    }
+
+    &-content{
+        background-color: $color-white;
+        width: 75%;
+        height: 460px;
+        margin: 66px auto;
+        display: grid;
+        row-gap: 50px;
+        column-gap: 60px;
+        grid-template-columns: 33.33333% 64.66667%;
+        position: relative;
+        transform: scale(.4);
+        transition: all .3s;
+        opacity: 0;
+        @include phone{
+            height: 360px;
+            display: grid;
+            row-gap: 50px;
+            column-gap: 40px;
+            grid-template-columns: 33.33333% 64.66667%;
+            width: 92%;
+        }
+        @include tablet{
+            height: 360px;
+            display: grid;
+            row-gap: 50px;
+            column-gap: 58px;
+            grid-template-columns: 33.33333% 64.66667%;
+            width: 92%;
+        }
+        @include tablet-2{
+            height: 360px;
+            display: grid;
+            row-gap: 50px;
+            column-gap: 58px;
+            grid-template-columns: 33.33333% 64.66667%;
+            width: 92%;
+        }
+        @include laptop{
+            height: 420px;
+            display: grid;
+            row-gap: 50px;
+            column-gap: 88px;
+            grid-template-columns: 33.33333% 64.66667%;
+            width: 88%;
+        }
+    }
+
+
+    &-image{
+        width: 340px;
+        display: block;
+        height: 230px;
+        @include phone{
+            width: 115%;
+            height: 180px;
+        }
+        @include tablet{
+            width: 115%;
+            height: 180px;
+        }
+        @include tablet-2{
+            width: 115%;
+            height: 180px;
+        }
+        @include laptop{
+            width: 115%;
+            height: 210px;
+        }
+    }
+
+    &-text{
+        margin-top: 80px;
+        @include phone{
+            margin-top: 30px;
+        }
+        @include tablet{
+            margin-top: 27px;
+        }
+        @include tablet-2{
+            margin-top: 44px;
+        }
+        @include laptop{
+            margin-top: 94px;
+        }
+
+        h2.heading-tertiary{
+            background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.73rem;
+            letter-spacing: 1px;
+            text-transform: $text-transform;
+            font-weight: 700;
+            display: $inline-block;
+            transition: all .155s;
+            @include phone{
+            font-size: 1.03rem;
+            }
+            @include tablet{
+            font-size: 1.08rem;
+            }
+            @include tablet-2{
+            font-size: 1.22rem;
+            margin-left: 22px;
+            }
+            @include laptop{
+            font-size: 1.42rem;
+            margin-left: 22px;
+            margin-bottom: 10px;
+            }
+            &:hover{
+                text-shadow: .5rem .7rem .8rem rgba($color: $color-black, $alpha: .4);
+                transform: skew(10deg, 2deg) scale(1.09);
+                @include phone{}
+            }
+        }
+
+        .heading-secondary{
+            margin: 10px 0px 12px 0px;
+            text-transform: $text-transform;
+            font-size: 17px;
+            @include phone{
+                text-align: center;
+                font-size: 14px;
+                margin-right: 23px;
+            }
+            @include tablet{
+                text-align: center;
+                font-size: 14px;
+                margin-right: 40px;
+            }
+            @include tablet-2{
+                text-align: center;
+                font-size: 16px;
+                margin-right: 49px;
+            }
+            @include laptop{
+                text-align: center;
+                font-size: 16px;
+                margin-right: 79px;
+            }
+        }
+
+        .paragraph{
+            font-size: 14px;
+            font-weight: lighter;
+            line-height: 18px;
+            display: grid;
+            row-gap: 40px;
+            column-gap: 20px;
+            grid-template-columns: 50% 50%;
+            margin-right: 78px;
+            hyphens: auto;
+            @include phone{
+                font-size: 12px;
+                line-height: 15px;
+                row-gap: 0px;
+                column-gap: 9px;
+                margin-right: 48px;
+            }
+            @include tablet{
+                font-size: 12px;
+                line-height: 15px;
+                row-gap: 0px;
+                column-gap: 9px;
+                margin-right: 53px;
+            }
+            @include tablet-2{
+                font-size: 12px;
+                line-height: 15px;
+                row-gap: 0px;
+                column-gap: 14px;
+                margin-right: 63px;
+            }
+            @include laptop{
+                font-size: 12px;
+                line-height: 15px;
+                row-gap: 0px;
+                column-gap: 34px;
+                margin-right: 123px;
+            }
+        }
+
+        .popup-button{
+            transform: translateX(248%) translateY(59%);
+            @include phone{
+                transform: translateX(120%) translateY(109%);
+            }
+            @include tablet{
+                transform: translateX(174%) translateY(70%);
+            }
+            @include tablet-2{
+                transform: translateX(199%) translateY(70%);
+            }
+            @include laptop{
+                transform: translateX(249%) translateY(45%);
+            }
+        }
+    }
+}

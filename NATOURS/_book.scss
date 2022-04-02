@@ -1,0 +1,75 @@
+.book{
+    background-image: linear-gradient(110deg, rgba($color-white, .75) 50%, transparent 50%), url('image/nature\ 13.jpg');
+    background-size: 100%;
+    background-position: center;
+    height: 28rem;
+    @include phone{
+        height: 23rem;
+    }
+    @include tablet{
+        height: 23rem;
+    }
+    @include tablet-2{
+        height: 23rem;
+    }
+    @include laptop{
+        height: 29rem;
+    }
+    
+
+    &__form{
+        width: 50%;
+        padding: 2.5rem;
+        @include phone{
+            padding: 1.3rem 0rem 1.3rem .9rem;
+            width: 49%;
+        }
+        @include tablet{
+            padding: 1.3rem 0rem 1.3rem .9rem;
+            width: 49%;
+        }
+        @include tablet-2{
+            padding: 1.3rem 0rem 1.3rem .9rem;
+            width: 49%;
+        }
+        @include laptop{
+            padding: 1.3rem 0rem 1.3rem 1.5rem;
+            width: 43%;
+        }
+        h2.heading-tertiary{
+            background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.73rem;
+            letter-spacing: 1px;
+            text-transform: $text-transform;
+            font-weight: 700;
+            display: $inline-block;
+            transition: all .155s;
+            margin-bottom: 0px;
+            @include phone{
+                font-size: 1.33rem;
+                margin-bottom: 18px;
+            }
+            @include tablet{
+                font-size: 1.43rem;
+                margin-bottom: 23px;
+            }
+            @include tablet-2{
+                font-size: 1.43rem;
+                margin-bottom: 23px;
+            }
+            @include laptop{
+                font-size: 1.43rem;
+                margin-bottom: 23px;
+            }
+            &:hover{
+                text-shadow: .5rem .7rem .8rem rgba($color: $color-black, $alpha: .4);
+                transform: skew(10deg, 2deg) scale(1.09);
+            }
+        }
+
+        
+    }
+}

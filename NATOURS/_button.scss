@@ -1,0 +1,94 @@
+.btn-more:link,
+.btn-more:visited{
+    text-decoration: none;
+    padding: $margin-05 $margin-05 $margin-05;
+    color: $color-primary;
+    padding-bottom: $margin-bottom-05;
+    font-size: $default-font-size;
+    border-bottom: 2px solid $color-primary;
+    display: $inline-block;
+    position: relative;
+    transition: all .2s;
+    border-radius: 1px;
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 6px 6px 5px rgba($color: #000000, $alpha: .5);
+        color: white;
+        border-bottom: none;
+    }
+    &:active{
+        transform: translateY(0px);
+        box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: .5);
+    }
+    &::after{
+        position: absolute;
+        bottom: 0px;
+        height: 0px;
+        width: 100%;
+        content: "";
+        z-index: -2;
+        left: 0px;
+        display: $inline-block;
+        border-radius: 2px;
+        transition: height .3s;
+    }
+    &:hover::after{
+        height: 100%;
+    }
+}
+
+.btn-text{
+    background-color: $color-grey-1;
+    &::after{
+        background-color: $color-primary-light;
+        display: $inline-block;
+        content: "";
+    }
+}
+.btn--green{
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 15px 30px;
+    &::after{
+        background-color: $color-primary;
+    }
+
+    &:hover::after{
+        transform: scale(1.6, 1.5);
+        opacity: 0;
+    }
+
+}
+
+.top--link{
+    position: absolute;
+    top: 78rem;
+    left: 11.19%;
+
+    @include phone-small{
+        position: absolute;
+        top: 62rem;
+        left: 1.12rem;
+    }
+    @include phone{
+        position: absolute;
+        top: 56rem;
+        left: 1.19rem;
+    }
+    
+    @include tablet{
+        position: absolute;
+        top: 60rem;
+        left: 5.03rem;
+    }
+    @include tablet-2{
+        position: absolute;
+        top: 64.5rem;
+        left: 1.06rem;
+    }
+    @include laptop{
+        position: absolute;
+        top: 64.5rem;
+        left: 1.06rem;
+    }
+}

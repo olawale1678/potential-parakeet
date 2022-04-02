@@ -1,0 +1,282 @@
+    @import "responsive-setup";
+
+.navigation{
+
+    &__checkbox{
+        display: none;
+    }
+
+    &__button{
+        background-color: $color-white;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        z-index: 2000;
+        cursor: pointer;
+        padding: 17px 0px 0px 11px;
+        box-shadow: 0px 5px 20px rgba($color: #000000, $alpha: .2);
+        @include phone-small{
+            height: 2.5rem;
+            width: 2.5rem;
+            top: 20px;
+            right: 25px;
+        }
+        @include phone{
+            height: 2.5rem;
+            width: 2.5rem;
+            top: 30px;
+            right: 30px;
+        }
+        @include tablet{
+            height: 3rem;
+            width: 3rem;
+            top: 30px;
+            right: 30px;
+        }
+        @include tablet-2{
+            height: 3rem;
+            width: 3rem;
+            top: 30px;
+            right: 30px;
+        }
+    }
+
+    &__background{
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 45px;
+        right: 45px;
+        z-index: 1000;
+        transition: transform .6s cubic-bezier(.86, 0, .07, 1);
+        @include phone-small{
+            height: 2rem;
+            width: 2rem;
+            top: 25px;
+            right: 30px;
+        }
+        @include phone{
+            height: 2rem;
+            width: 2rem;
+            top: 35px;
+            right: 35px;
+        }
+        @include tablet{
+            height: 2.5rem;
+            width: 2.5rem;
+            top: 35px;
+            right: 35px;
+        }
+        @include tablet-2{
+            height: 2.5rem;
+            width: 2.5rem;
+            top: 35px;
+            right: 35px;
+        }
+        // transform: scale(50);
+    }
+
+    &__nav{
+        text-align: center;
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1500;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    &__list{
+        list-style: none;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        
+    }
+    
+    &__item{
+        transition: all .4s;
+        &:hover{
+            transform: translateX(9px);
+        }
+        &:not(:last-child){
+            margin-bottom: 19px;
+        }
+    }
+    
+    &__link{
+        &:link,
+        &:visited{
+            padding: 10px 20px;
+            color: $color-white;
+            font-weight: lighter;
+            font-size: 1.7rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: $text-transform;
+            text-decoration: none;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 228%;
+            transition: all .47s;
+            @include phone-small{
+                font-size: .92rem;
+                padding: 10px 5px;
+                background-size: 228%;
+            }
+            @include phone{
+                font-size: 1.39rem;
+                padding: 10px 20px;
+                background-size: 228%;
+            }
+            @include tablet{
+                font-size: 1.54rem;
+                padding: 10px 20px;
+                background-size: 228%;
+            }
+            @include tablet-2{
+                font-size: 1.54rem;
+                padding: 10px 20px;
+                background-size: 228%;
+            }
+
+            span{
+                display: inline-block;
+                margin-right: 5px;
+                @include phone{}
+            }
+        }
+        
+        &:hover,
+        &:active{
+            background-position: 100%;
+            color: $color-primary;
+        }
+    }
+
+    &__checkbox:checked ~ &__background{
+        transform: scale(60);
+        @include phone-small{
+            transform: scale(50);
+        }
+        @include phone{
+            transform: scale(50);
+        }
+        @include tablet{
+            transform: scale(50);
+        }
+        @include tablet-2{
+            transform: scale(50);
+        }
+    }
+    &__checkbox:checked ~ &__nav{
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    &__icon{
+        position: relative;
+        margin-top: 11px;
+        margin-left: 5px;
+        @include phone-small{
+            margin-top: 2px;
+            margin-left: -2px;
+        }
+        @include phone{
+            margin-top: 2px;
+            margin-left: -2px;
+        }
+        @include tablet{
+            margin-top: 5.8px;
+            margin-left: -.3px;
+        }
+        @include tablet-2{
+            margin-top: 5.8px;
+            margin-left: -.3px;
+        }
+        &,
+        &::before,
+        &::after{
+            width: 1.6rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+            @include phone-small{
+                width: 1.4rem;
+            }
+            @include phone{
+                width: 1.4rem;
+            }
+            @include tablet{
+                width: 1.7rem;
+            }
+            @include tablet-2{
+                width: 1.7rem;
+            }
+        }
+
+        
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0px;
+            transition: all .3s;
+        }
+
+        &::after{
+            top: .5rem;
+        }
+
+        &::before{
+            top: -.5rem;
+        }
+    }
+    
+    &__button:hover &__icon::after{
+        top: .64rem;
+        @include phone-small{top: .6rem;}
+        @include phone{top: .6rem;}
+        @include tablet{top: .6rem;}
+        @include tablet-2{top: .6rem;}
+    }
+    
+    &__button:hover &__icon::before{
+        top: -.64rem;
+        @include phone-small{
+            top: -.6rem;
+        }
+        @include phone{
+            top: -.6rem;
+        }
+        @include tablet{
+            top: -.6rem;
+        }
+        @include tablet-2{
+            top: -.6rem;
+        }
+    }
+
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+    
+    &__checkbox:checked + &__button &__icon::after{
+        top: 0px;
+        transform: rotate(135deg);
+    }
+    
+    &__checkbox:checked + &__button &__icon::before{
+        top: 0px;
+        transform: rotate(-135deg);
+    }
+}
